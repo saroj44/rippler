@@ -1,0 +1,17 @@
+<div class="header">
+  <div>
+    <img src="../../assets/images/person-cog.svg"/>
+  </div>
+</div>
+
+ <div class="main">
+   <div class="product-container">
+    <div  *ngFor="let product of products" class="product-card">
+      <img src="../../assets/images/{{product.image_name}}"/>
+      <label class="rrp_price">RRP £{{product.rrp_price | number:'1.2'}}</label>
+      <label class="product_name"><span class="category">{{product.category}}</span>&nbsp;{{product.product_name}}</label>
+      <label class="size">Size {{product.size}}</label>
+      <label class="rental_price">£{{product.rental_price | number:'1.2'}} Rental</label>
+    </div>
+   </div>
+ </div> 
